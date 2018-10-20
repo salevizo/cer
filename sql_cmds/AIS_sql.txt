@@ -1,0 +1,74 @@
+CREATE TABLE nari_dynamic
+(
+  mmsi INTEGER NOT NULL,
+  status INTEGER,
+  turn double precision,
+  speed double precision,
+  course double precision,
+  heading 	integer,
+  lon 		double precision,
+  lat 		double precision,
+  t 		bigint
+);
+
+COPY nari_dynamic(mmsi,status,turn,speed,course,heading,lon,lat,t) 
+FROM '/home/cer/Downloads/AIS_Data/nari_dynamic.csv' DELIMITER ',' CSV HEADER;
+
+
+
+CREATE TABLE nari_dynamic_aton
+(
+  mmsi INTEGER NOT NULL,
+  typeofaid smallint,
+  aidsname   text ,
+  virtual    boolean,
+  lon 		  double precision,
+  lat 		  double precision,
+  t 		  bigint
+);
+
+
+COPY nari_dynamic_aton(mmsi,typeofaid,aidsname,virtual,lon,lat,t) 
+FROM '/home/cer/Downloads/AIS_Data/nari_dynamic_aton.csv' DELIMITER ',' CSV HEADER;
+
+CREATE TABLE nari_dynamic_sar
+(
+  mmsi INTEGER NOT NULL,
+  altitude smallint,
+  speed 	double precision ,
+  course 	double precision ,
+  lon 		  double precision,
+  lat 		  double precision,
+  t 		  bigint
+);
+
+
+COPY nari_dynamic_sar(mmsi,altitude,speed,course,lon,lat,t) 
+FROM '/home/cer/Downloads/AIS_Data/nari_dynamic_sar.csv' DELIMITER ',' CSV HEADER;
+
+
+CREATE TABLE nari_ais_static
+(
+  sourcemmsi INTEGER NOT NULL,
+  imo 			  integer  ,
+  callsign 	  text,
+  shipname 	  text ,
+  shiptype 	  integer,
+  to_bow 	  	  integer,
+  to_stern 	  integer,
+  to_starboard   integer,
+  to_port 		  integer,
+  eta 			  text ,
+  draught 		  double precision,
+  destination 	  text,
+  mothershipmmsi integer,
+  t 			  bigint
+);
+
+
+COPY nari_ais_static(sourcemmsi,imo,callsign,shipname,shiptype,to_bow,to_stern,to_starboard,to_port,eta,draught,destination,mothershipmmsi,t) 
+FROM '/home/cer/Downloads/AIS_Data/nari_static.csv' DELIMITER ',' CSV HEADER;
+
+
+
+
