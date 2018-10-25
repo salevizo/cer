@@ -15,3 +15,9 @@ for row in rows:
 print "Records created successfully";
 
 conn.close()
+
+
+
+######to run the file change the password of postgre user. Commands are listed below. I used as password:2
+#sudo -u postgres psql postgres
+#\password postgres
