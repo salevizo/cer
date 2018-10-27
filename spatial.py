@@ -29,7 +29,6 @@ lon0 = (maxlon+minlon)/2
 lat1 = (maxlat+minlat)/2-20
 
 
-
 fig,ax=plt.subplots(figsize=(15,15))
 
 m = Basemap(llcrnrlon=minlon,llcrnrlat=minlat,urcrnrlon=maxlon,urcrnrlat=maxlat,rsphere=(6378137.00,6356752.3142),resolution='l',projection='cyl',lat_0=lat0,lon_0=lon0,lat_ts = lat1)
