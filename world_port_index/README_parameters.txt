@@ -1,0 +1,12 @@
+-----------------------------------------------------------------------------------------------------
+-- Object : World Port Index (WPI)
+-- File name : WPI.shp
+-- Source : National Geospatial-Intelligence Agency (http://msi.nga.mil/MSISiteContent/StaticFiles/NAV_PUBS/WPI/WPI_Shapefile.zip)
+-- Dataset version : Downloaded 29/02/2016
+-- SRID : WGS84
+-- Coverage : World
+-- Period : NA
+-- Volume : ~ 3700 ports
+-- Licence :Ppublic
+-- Description : The shapefile contains location and physical characteristics of, and the facilities and services offered by major ports and terminals world-wide.
+-----------------------------------------------------------------------------------------------------

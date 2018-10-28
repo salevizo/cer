@@ -33,7 +33,6 @@ con = psycopg2.connect(database = "doi105281zenodo1167595", user = "postgres", p
 with con:
     df = geopandas.GeoDataFrame.from_postgis(query, con)
 
-
 sf = shp.Reader("port.shp")
 
 minlon = max(-180,df['st_x'].min()-5)
