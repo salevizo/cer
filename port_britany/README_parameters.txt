@@ -1,0 +1,12 @@
+-----------------------------------------------------------------------------------------------------
+-- Object : Ports of Brittany
+-- File name : port.shp
+-- Source : Région Bretagne (https://www.data.gouv.fr/fr/datasets/ports-de-bretagne)
+-- Dataset version : v. 12/10/2017
+-- SRID : WGS84
+-- Coverage : Brittany
+-- Period : NA
+-- Volume : 222 ports
+-- Licence : Licence Ouverte / Open Licence (https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Open_Licence.pdf)
+-- Description : The shapefile contains coordinates of ports of Brittany.
+-----------------------------------------------------------------------------------------------------

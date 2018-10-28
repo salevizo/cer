@@ -23,7 +23,7 @@ import shapefile as shp
 from fiona import collection
 
 db=('doi105281zenodo1167595')
-query="SELECT  st_x(st_centroid(geom)) as st_x ,st_y(st_centroid(geom)) as st_y, geom FROM geographic_features.fishing_constraints;"
+query="SELECT  st_x(st_centroid(geom)) as st_x ,st_y(st_centroid(geom)) as st_y, geom FROM ports.ports_of_brittany;"
 
 
 
@@ -34,7 +34,7 @@ with con:
     df = geopandas.GeoDataFrame.from_postgis(query, con)
 
 
-sf = shp.Reader("fishing_interdiction.shp")
+sf = shp.Reader("port.shp")
 
 minlon = max(-180,df['st_x'].min()-5)
 minlat = max(-90,df['st_y'].min()-5)
@@ -73,33 +73,9 @@ for element in y_cor:
         yy.append(el)
 
 
-m.plot(xx,yy,markersize=10, markerfacecolor='red')
+m.plot(xx,yy,marker ='o',markersize=10, markerfacecolor='red',linewidth=0)
 
 
 plt.show()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#axes.set_xlim(-180,+180)
-#axes.set_ylim(-90,90)
-#plt.show()
