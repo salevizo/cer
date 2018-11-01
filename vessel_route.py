@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import psycopg2
 
 db=('doi105281zenodo1167595')
-query="SELECT lat, lon FROM nari_dynamic WHERE mmsi=228231800;"
+query="SELECT lat, lon FROM nari_dynamic WHERE mmsi=228931000;"
 #WHERE mmsi=228231800;
 
 con = psycopg2.connect(database = "doi105281zenodo1167595", user = "postgres", password = "2", host = "127.0.0.1", port = "5432")

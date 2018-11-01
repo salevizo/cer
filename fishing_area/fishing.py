@@ -10,17 +10,15 @@ import numpy as np
 import pandas as pd
 import geopandas
 from numpy import asarray
-
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 import re
-from matplotlib.collections import PatchCollection
 import utm
 from matplotlib import pyplot
 from descartes import PolygonPatch
 import shapefile as shp
-from fiona import collection
+
 
 db=('doi105281zenodo1167595')
 query="SELECT  st_x(st_centroid(geom)) as st_x ,st_y(st_centroid(geom)) as st_y, geom FROM geographic_features.europe_coastline LIMIT 10;"

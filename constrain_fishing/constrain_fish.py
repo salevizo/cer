@@ -10,15 +10,12 @@ import numpy as np
 import pandas as pd
 import geopandas
 from numpy import asarray
-
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 import re
-from matplotlib.collections import PatchCollection
 import utm
 from matplotlib import pyplot
-from descartes import PolygonPatch
 import shapefile as shp
 from fiona import collection
 
@@ -46,7 +43,6 @@ lat1 = (maxlat+minlat)/2-20
 
 
 m = Basemap(llcrnrlon=minlon,llcrnrlat=minlat,urcrnrlon=maxlon,urcrnrlat=maxlat,rsphere=(6378137.00,6356752.3142),resolution='l',projection='cyl',lat_0=lat0,lon_0=lon0,lat_ts = lat1)
-#,llcrnrlat =min_lat,llcrnrlon =min_lon,urcrnrlat =max_lat, urcrnrlon =max_lon
 m.drawcoastlines()
 m.fillcontinents (color='lightgray', lake_color='lightblue')
 

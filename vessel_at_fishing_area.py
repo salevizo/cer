@@ -15,8 +15,6 @@ with con:
 con.close()
 
 
-print ais_data.tail(5)
-
 
 minlon = max(-180,min(ais_data['lon'])-5)
 minlat = max(-90,min(ais_data['lat'])-5)
@@ -34,11 +32,8 @@ m = Basemap(llcrnrlon=minlon,llcrnrlat=minlat,urcrnrlon=maxlon,urcrnrlat=maxlat,
 
 m.drawcoastlines()
 m.fillcontinents (color='lightgray', lake_color='lightblue')
-#m.drawparallels(np.arange(-90.,91.,30.))
-#m.drawmeridians(np.arange(-180.,181.,60.))
-m.drawmapboundary(fill_color='aqua')
 
-#m.drawcounties()
+m.drawmapboundary(fill_color='aqua')
 
 x, y = m(np.array(ais_data['lon']),np.array(ais_data['lat']))
 m.plot(x,y, marker ='o', markersize=6, markerfacecolor='red', linewidth=0)
